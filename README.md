@@ -74,7 +74,7 @@ tradexa_assignment/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone (https://github.com/ItapeTanmay/tradexa-python-developer-internship-assignment.git)
 cd tradexa_assignment
 ```
 
