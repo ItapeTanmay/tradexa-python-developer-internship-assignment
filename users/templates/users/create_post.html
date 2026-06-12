@@ -1,0 +1,46 @@
+<!-- users/templates/users/create_post.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - Tradexa Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Create a New Post</h3>
+
+                        <form method="post">
+                            {% csrf_token %}
+
+                            <div class="mb-3">
+                                {{ form.text.label_tag }}
+                                {{ form.text }}
+                                {% if form.text.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {{ form.text.errors|striptags }}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
