@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-A Django 4.x application with two separate apps (`users` and `products`) and two independent SQLite databases. Demonstrates multi-database routing, custom user authentication, ORM relationships with `db_constraint=False`, and admin customization.
+A Django 6.x application with two separate apps (`users` and `products`) and two independent SQLite databases. Demonstrates multi-database routing, custom user authentication, ORM relationships with `db_constraint=False`, and admin customization.
 
 ---
 
@@ -28,7 +28,7 @@ A Django 4.x application with two separate apps (`users` and `products`) and two
 | Layer | Technology |
 |---|---|
 | Language | Python 3 |
-| Framework | Django 4.x |
+| Framework | Django 6.x |
 | Frontend | Bootstrap 5 (CDN) |
 | Databases | SQLite (two separate databases) |
 | Config | python-decouple (environment variables) |
