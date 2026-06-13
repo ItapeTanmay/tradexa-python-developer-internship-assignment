@@ -41,7 +41,13 @@
                                 <p class="card-text">{{ post.text }}</p>
                                 <p class="text-muted small mb-0">
                                     By <strong>{{ post.user.username }}</strong> on {{ post.created_at|date:"M d, Y H:i" }}
+                                    {% if post.updated_at|date:"U" != post.created_at|date:"U" %}
+                                        <br><em>Edited on {{ post.updated_at|date:"M d, Y H:i" }}</em>
+                                    {% endif %}
                                 </p>
+                                {% if user.is_authenticated and post.user == user %}
+                                    <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-outline-primary mt-2">Edit</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
